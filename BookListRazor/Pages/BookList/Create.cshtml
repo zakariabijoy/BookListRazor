@@ -1,0 +1,52 @@
+﻿@page
+@model BookListRazor.CreateModel
+
+<br/>
+<h2 class="text-info">Create New Book</h2>
+<br/>
+
+<div class="container border" style="padding: 30px;">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="row form-group">
+            <div class="col-md-3">
+                <label>Name</label>
+            </div>
+            <div class="col-md-6">
+                <input asp-for="Book.Name" class="form-control"/>
+                <span class="text-danger" asp-validation-for="Book.Name"></span>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-3">
+                <label>Author</label>
+            </div>
+            <div class="col-md-6">
+                <input asp-for="Book.Author" class="form-control" />
+                <span class="text-danger" asp-validation-for="Book.Author"></span>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-3">
+                <label>ISBN</label>
+            </div>
+            <div class="col-md-6">
+                <input asp-for="Book.ISBN" class="form-control" />
+                <span class="text-danger" asp-validation-for="Book.ISBN"></span>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-3 offset-3">
+                <button type="submit" class="btn btn-primary form-control">Create</button>
+            </div>
+            <div class="col-md-3 ">
+                <a class="btn btn-success form-control" asp-page="Index">Back to list</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial"/>
+}

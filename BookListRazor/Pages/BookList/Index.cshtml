@@ -1,0 +1,46 @@
+﻿@page
+@model BookListRazor.IndexModel
+
+<br/>
+<div class="container row p-0 m-0">
+    <div class="col-md-9">
+        <h2 class="text-info">Book List</h2>
+    </div>
+    <div class="col-md-3">
+        <a class="btn btn-info text-white" asp-page="Create">Create New Book</a>
+    </div>
+    <div class="col-md-12 p-3 mt-3 border">
+        @if (Model.Books.Count() > 0)
+        {
+            <table class="table table-striped border">
+                <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Action</th>
+
+                </tr>
+                @foreach (var item in Model.Books)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Author</td>
+                        <td>@item.ISBN</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm text-white">Delete</button>
+                            <a class="btn btn-warning btn-sm text-white" asp-page="Edit">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+
+        }
+        else
+        {
+            <p>No Books Available</p>
+        }
+       
+    </div>
+</div>
+
+
