@@ -28,7 +28,7 @@
                         <td>@item.ISBN</td>
                         <td>
                             <button class="btn btn-danger btn-sm text-white">Delete</button>
-                            <a class="btn btn-warning btn-sm text-white" asp-page="Edit">Edit</a>
+                            <a class="btn btn-warning btn-sm text-white" asp-page="Edit" asp-route-id="@item.Id">Edit</a>
                         </td>
                     </tr>
                 }
