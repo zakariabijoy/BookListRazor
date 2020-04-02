@@ -3,11 +3,14 @@
 
 <br />
 <div class="container row p-0 m-0">
-    <div class="col-md-9">
+    <div class="col-md-6">
         <h2 class="text-info">Book List</h2>
     </div>
     <div class="col-md-3">
         <a class="btn btn-info text-white" asp-page="Create">Create New Book</a>
+    </div>
+    <div class="col-md-3">
+        <a class="btn btn-info text-white" asp-page="Upsert">Add(Upsert) New Book</a>
     </div>
     <div class="col-md-12 p-3 mt-3 border">
         <form method="post">
@@ -42,21 +45,21 @@
             }
         </form>
     </div>
-    
+
     <div class="col-md-12" style="text-align: center">
-        <br/>
+        <br />
         <span class="h3 text-info">OR</span>
-        <br/><br/>
+        <br /><br />
     </div>
     <div class="col-12 border p-3">
         <table id="DT_load" class="table table-striped table-bordered" style="width: 100%">
             <thead>
-            <tr>
-                <th>Name</th>
-                <th>Author</th>
-                <th>ISBN</th>
-                <th>Action</th>
-            </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Action</th>
+                </tr>
             </thead>
         </table>
     </div>
